@@ -1,11 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers';
-// import alertReducer from './reducers/alert';
-// import profileReducer from './reducers/profile';
-// import postReducer from './reducers/post';
+//import rootReducer from './reducers/index';
+import alertReducer from './reducers/alert';
+import authReducer from './reducers/auth';
+import profileReducer from './reducers/profile';
  
 const store = configureStore({
-  reducer: rootReducer
+  reducer: {
+    alert: alertReducer,
+    auth: authReducer,
+    profile: profileReducer
+  }
 });
 
 export default store;
