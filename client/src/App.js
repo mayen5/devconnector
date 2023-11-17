@@ -14,6 +14,7 @@ import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
+import NotFound from './components/layout/NotFound';
 import PrivateRoute from './components/routing/PrivateRoute';
 
 // Redux
@@ -49,6 +50,7 @@ const App = () =>  {
             <Route path="/login" element={<Login />} />
             <Route path="/profiles" element={<Profiles />} />
             <Route path="/profile/:id" element={<Profile />} />
+            <Route path="/*" element={<NotFound />} />
             <Route path="/dashboard" element={<PrivateRoute component={Dashboard} />} />
             <Route path="/create-profile" element={<PrivateRoute component={CreateProfile} />} />
             <Route path="/edit-profile" element={<PrivateRoute component={EditProfile} />} />
